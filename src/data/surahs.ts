@@ -32,7 +32,7 @@ export const surahs: Surah[] = [
     duration: '1:55:45',
     audioUrl: 'https://server8.mp3quran.net/afs/003.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const surahs: Surah[] = [
     duration: '1:40:00',
     audioUrl: 'https://server8.mp3quran.net/afs/004.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const surahs: Surah[] = [
     duration: '1:50:00',
     audioUrl: 'https://server8.mp3quran.net/afs/006.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ export const surahs: Surah[] = [
     duration: '1:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/007.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const surahs: Surah[] = [
     duration: '0:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/010.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 11,
@@ -120,7 +120,7 @@ export const surahs: Surah[] = [
     duration: '0:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/011.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 12,
@@ -131,7 +131,7 @@ export const surahs: Surah[] = [
     duration: '0:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/012.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 13,
@@ -142,7 +142,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/013.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 14,
@@ -175,7 +175,7 @@ export const surahs: Surah[] = [
     duration: '1:00:00',
     audioUrl: 'https://server8.mp3quran.net/afs/016.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 17,
@@ -186,7 +186,7 @@ export const surahs: Surah[] = [
     duration: '0:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/017.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 18,
@@ -197,7 +197,7 @@ export const surahs: Surah[] = [
     duration: '0:55:00',
     audioUrl: 'https://server8.mp3quran.net/afs/018.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 19,
@@ -208,7 +208,7 @@ export const surahs: Surah[] = [
     duration: '0:40:00',
     audioUrl: 'https://server8.mp3quran.net/afs/019.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 20,
@@ -241,7 +241,7 @@ export const surahs: Surah[] = [
     duration: '0:35:00',
     audioUrl: 'https://server8.mp3quran.net/afs/022.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 23,
@@ -252,7 +252,7 @@ export const surahs: Surah[] = [
     duration: '0:40:00',
     audioUrl: 'https://server8.mp3quran.net/afs/023.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 24,
@@ -263,7 +263,7 @@ export const surahs: Surah[] = [
     duration: '0:30:00',
     audioUrl: 'https://server8.mp3quran.net/afs/024.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 25,
@@ -274,7 +274,7 @@ export const surahs: Surah[] = [
     duration: '0:30:00',
     audioUrl: 'https://server8.mp3quran.net/afs/025.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 26,
@@ -307,7 +307,7 @@ export const surahs: Surah[] = [
     duration: '0:40:00',
     audioUrl: 'https://server8.mp3quran.net/afs/028.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 29,
@@ -318,7 +318,7 @@ export const surahs: Surah[] = [
     duration: '0:35:00',
     audioUrl: 'https://server8.mp3quran.net/afs/029.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 30,
@@ -329,7 +329,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/030.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 31,
@@ -340,7 +340,7 @@ export const surahs: Surah[] = [
     duration: '0:20:00',
     audioUrl: 'https://server8.mp3quran.net/afs/031.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 32,
@@ -373,7 +373,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/034.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 35,
@@ -384,7 +384,7 @@ export const surahs: Surah[] = [
     duration: '0:20:00',
     audioUrl: 'https://server8.mp3quran.net/afs/035.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 36,
@@ -395,7 +395,7 @@ export const surahs: Surah[] = [
     duration: '0:30:00',
     audioUrl: 'https://server8.mp3quran.net/afs/036.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 37,
@@ -406,7 +406,7 @@ export const surahs: Surah[] = [
     duration: '0:50:00',
     audioUrl: 'https://server8.mp3quran.net/afs/037.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 38,
@@ -439,7 +439,7 @@ export const surahs: Surah[] = [
     duration: '0:35:00',
     audioUrl: 'https://server8.mp3quran.net/afs/040.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 41,
@@ -450,7 +450,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/041.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 42,
@@ -461,7 +461,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/042.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 43,
@@ -472,7 +472,7 @@ export const surahs: Surah[] = [
     duration: '0:30:00',
     audioUrl: 'https://server8.mp3quran.net/afs/043.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 44,
@@ -505,7 +505,7 @@ export const surahs: Surah[] = [
     duration: '0:15:00',
     audioUrl: 'https://server8.mp3quran.net/afs/046.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 47,
@@ -516,7 +516,7 @@ export const surahs: Surah[] = [
     duration: '0:20:00',
     audioUrl: 'https://server8.mp3quran.net/afs/047.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 48,
@@ -549,7 +549,7 @@ export const surahs: Surah[] = [
     duration: '0:20:00',
     audioUrl: 'https://server8.mp3quran.net/afs/050.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 51,
@@ -582,7 +582,7 @@ export const surahs: Surah[] = [
     duration: '0:25:00',
     audioUrl: 'https://server8.mp3quran.net/afs/053.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 54,
@@ -626,7 +626,7 @@ export const surahs: Surah[] = [
     duration: '0:15:00',
     audioUrl: 'https://server8.mp3quran.net/afs/057.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 58,
@@ -736,7 +736,7 @@ export const surahs: Surah[] = [
     duration: '0:15:00',
     audioUrl: 'https://server8.mp3quran.net/afs/067.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 68,
@@ -747,7 +747,7 @@ export const surahs: Surah[] = [
     duration: '0:20:00',
     audioUrl: 'https://server8.mp3quran.net/afs/068.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 69,
@@ -791,7 +791,7 @@ export const surahs: Surah[] = [
     duration: '0:10:00',
     audioUrl: 'https://server8.mp3quran.net/afs/072.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 3
   },
   {
     id: 73,
@@ -978,7 +978,7 @@ export const surahs: Surah[] = [
     duration: '0:10:00',
     audioUrl: 'https://server8.mp3quran.net/afs/089.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 90,
@@ -1033,7 +1033,7 @@ export const surahs: Surah[] = [
     duration: '0:05:00',
     audioUrl: 'https://server8.mp3quran.net/afs/094.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 95,
@@ -1055,7 +1055,7 @@ export const surahs: Surah[] = [
     duration: '0:05:00',
     audioUrl: 'https://server8.mp3quran.net/afs/096.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 97,
@@ -1066,7 +1066,7 @@ export const surahs: Surah[] = [
     duration: '0:03:00',
     audioUrl: 'https://server8.mp3quran.net/afs/097.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 98,
@@ -1242,7 +1242,7 @@ export const surahs: Surah[] = [
     duration: '0:02:00',
     audioUrl: 'https://server8.mp3quran.net/afs/113.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   },
   {
     id: 114,
@@ -1253,6 +1253,6 @@ export const surahs: Surah[] = [
     duration: '0:02:00',
     audioUrl: 'https://server8.mp3quran.net/afs/114.mp3',
     reciter: 'Ahmed ibn Ali al-Ajamy',
-    reciterId: 1
+    reciterId: 2
   }
 ];
