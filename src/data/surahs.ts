@@ -230,7 +230,7 @@ export const surahs: Surah[] = [
   duration: '50:10',
   audioUrl: 'https://server8.mp3quran.net/mishaari/021.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 22,
@@ -241,7 +241,7 @@ export const surahs: Surah[] = [
   duration: '42:35',
   audioUrl: 'https://server8.mp3quran.net/mishaari/022.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 23,
@@ -252,7 +252,7 @@ export const surahs: Surah[] = [
   duration: '48:50',
   audioUrl: 'https://server8.mp3quran.net/mishaari/023.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 24,
@@ -263,7 +263,7 @@ export const surahs: Surah[] = [
   duration: '36:20',
   audioUrl: 'https://server8.mp3quran.net/mishaari/024.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 25,
@@ -274,7 +274,7 @@ export const surahs: Surah[] = [
   duration: '38:45',
   audioUrl: 'https://server8.mp3quran.net/mishaari/025.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 26,
@@ -285,7 +285,7 @@ export const surahs: Surah[] = [
   duration: '1:02:10',
   audioUrl: 'https://server8.mp3quran.net/mishaari/026.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 27,
@@ -296,7 +296,7 @@ export const surahs: Surah[] = [
   duration: '44:05',
   audioUrl: 'https://server8.mp3quran.net/mishaari/027.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 28,
@@ -307,7 +307,7 @@ export const surahs: Surah[] = [
   duration: '46:30',
   audioUrl: 'https://server8.mp3quran.net/mishaari/028.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 29,
@@ -318,7 +318,7 @@ export const surahs: Surah[] = [
   duration: '39:55',
   audioUrl: 'https://server8.mp3quran.net/mishaari/029.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 },
 {
   id: 30,
@@ -329,6 +329,6 @@ export const surahs: Surah[] = [
   duration: '34:40',
   audioUrl: 'https://server8.mp3quran.net/mishaari/030.mp3',
   reciter: 'Mishary Rashid Alafasy',
-  reciterId: 2
+  reciterId: 3
 }
 ];
