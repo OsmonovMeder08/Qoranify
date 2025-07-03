@@ -1,5 +1,16 @@
-import React from 'react';
-import { Home, Search, Library, BookOpen, Plus, Heart, Download, Moon, Sun } from 'lucide-react';
+import React, { useState } from 'react';
+import {
+  Home,
+  Search,
+  Library,
+  BookOpen,
+  Plus,
+  Heart,
+  Download,
+  Moon,
+  Menu,
+  X
+} from 'lucide-react';
 
 interface SidebarProps {
   activeSection: string;
@@ -8,12 +19,14 @@ interface SidebarProps {
   onCreatePlaylist: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ 
-  activeSection, 
-  setActiveSection, 
-  playlists, 
-  onCreatePlaylist 
+const Sidebar: React.FC<SidebarProps> = ({
+  activeSection,
+  setActiveSection,
+  playlists,
+  onCreatePlaylist
 }) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const sidebarItems = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'search', label: 'Search', icon: Search },
@@ -22,23 +35,29 @@ const Sidebar: React.FC<SidebarProps> = ({
     { id: 'reciters', label: 'Reciters', icon: Moon },
   ];
 
-  return (
-    <div className="w-64 bg-black/40 backdrop-blur-sm p-6 flex flex-col">
+  const renderSidebarContent = () => (
+    <div className="w-64 bg-black/80 backdrop-blur-sm p-6 flex flex-col h-full">
       {/* Logo */}
-      <div className="flex items-center gap-2 mb-8">
+      <div className="flex items-center justify-between mb-8 md:justify-start md:gap-2">
         <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center">
           <Moon className="w-5 h-5" />
         </div>
-        <h1 className="text-xl font-bold">Meda-Qoranify</h1>
+        <h1 className="text-xl font-bold hidden md:block">Meda-Qoranify</h1>
+        <button onClick={() => setMobileOpen(false)} className="md:hidden text-gray-300">
+          <X />
+        </button>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1">
+      <nav className="flex-1 overflow-y-auto">
         <ul className="space-y-2">
           {sidebarItems.map((item) => (
             <li key={item.id}>
               <button
-                onClick={() => setActiveSection(item.id)}
+                onClick={() => {
+                  setActiveSection(item.id);
+                  setMobileOpen(false);
+                }}
                 className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 ${
                   activeSection === item.id
                     ? 'bg-white/10 text-white'
@@ -56,7 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div className="mt-8 pt-4 border-t border-white/10">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium text-gray-300">Playlists</h3>
-            <button 
+            <button
               onClick={onCreatePlaylist}
               className="text-gray-400 hover:text-white"
             >
@@ -65,8 +84,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           </div>
           <ul className="space-y-2">
             <li>
-              <button 
-                onClick={() => setActiveSection('favorites')}
+              <button
+                onClick={() => {
+                  setActiveSection('favorites');
+                  setMobileOpen(false);
+                }}
                 className={`text-sm transition-colors ${
                   activeSection === 'favorites' ? 'text-white' : 'text-gray-300 hover:text-white'
                 }`}
@@ -76,8 +98,11 @@ const Sidebar: React.FC<SidebarProps> = ({
               </button>
             </li>
             <li>
-              <button 
-                onClick={() => setActiveSection('downloaded')}
+              <button
+                onClick={() => {
+                  setActiveSection('downloaded');
+                  setMobileOpen(false);
+                }}
                 className={`text-sm transition-colors ${
                   activeSection === 'downloaded' ? 'text-white' : 'text-gray-300 hover:text-white'
                 }`}
@@ -97,6 +122,30 @@ const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </nav>
     </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Sidebar */}
+      <div className="hidden md:block">
+        {renderSidebarContent()}
+      </div>
+
+      {/* Mobile Toggle Button */}
+      <button
+        className="md:hidden fixed top-4 left-4 z-50 bg-black/50 text-white p-2 rounded-full backdrop-blur"
+        onClick={() => setMobileOpen(true)}
+      >
+        <Menu />
+      </button>
+
+      {/* Mobile Sidebar */}
+      {mobileOpen && (
+        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm md:hidden">
+          {renderSidebarContent()}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -1,35 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: sans-serif;
-}
-
-/* Контейнеры и блоки не должны быть фиксированы */
-.container, .content, .wrapper {
-  width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* Адаптация текста и карточек */
-.card {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-/* Адаптация под телефон (если нужно) */
-@media (max-width: 768px) {
-  .card, .container, .content {
-    padding: 8px;
-    font-size: 16px;
-  }
-}
