@@ -35,9 +35,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     { id: 'reciters', label: 'Reciters', icon: Moon },
   ];
 
-  const renderSidebarContent = () => (
-    // Вместо фиксированной ширины w-64 используем w-full с ограничением max-w-xs для адаптивности
-    <div className="w-full max-w-xs bg-black/80 backdrop-blur-sm p-6 flex flex-col h-full">
+  const renderSidebarContent = (isMobile: boolean = false) => (
+    <div className={`bg-black/80 backdrop-blur-sm p-6 flex flex-col h-full ${isMobile ? 'w-full' : 'w-full max-w-xs'}`}>
       {/* Logo */}
       <div className="flex items-center justify-between mb-8">
         <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center">
@@ -145,7 +144,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Mobile Sidebar */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm md:hidden flex">
-          {renderSidebarContent()}
+          {renderSidebarContent(true)}
         </div>
       )}
     </>
