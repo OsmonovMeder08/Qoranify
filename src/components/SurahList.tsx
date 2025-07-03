@@ -22,9 +22,9 @@ const SurahList: React.FC<SurahListProps> = ({
   isPlaying
 }) => {
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4">
+    <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 w-full overflow-x-hidden">
       <div className="space-y-2">
-        {surahs.map((surah, index) => (
+        {surahs.map((surah) => (
           <div
             key={surah.id}
             className={`flex items-center gap-4 p-3 rounded-lg transition-colors cursor-pointer group ${
@@ -37,7 +37,9 @@ const SurahList: React.FC<SurahListProps> = ({
             <div className="flex-1" onClick={() => onPlaySurah(surah)}>
               <h4 className="font-medium">{surah.name}</h4>
               <p className="text-sm text-gray-300">{surah.arabicName}</p>
-              <p className="text-xs text-gray-400">{surah.verses} verses • {surah.reciter}</p>
+              <p className="text-xs text-gray-400">
+                {surah.verses} verses • {surah.reciter}
+              </p>
             </div>
             <div className="text-sm text-gray-400 mr-4">
               {surah.duration}
@@ -46,8 +48,8 @@ const SurahList: React.FC<SurahListProps> = ({
               <button
                 onClick={() => onToggleFavorite(surah.id)}
                 className={`transition-colors ${
-                  favorites.includes(surah.id) 
-                    ? 'text-emerald-400' 
+                  favorites.includes(surah.id)
+                    ? 'text-emerald-400'
                     : 'opacity-0 group-hover:opacity-100 text-gray-400 hover:text-white'
                 }`}
               >
