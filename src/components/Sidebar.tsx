@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center">
           <Moon className="w-5 h-5" />
         </div>
-        <h1 className="text-xl font-bold">Meda-Coranify</h1>
+        <h1 className="text-xl font-bold">Meda-Qoranify</h1>
       </div>
 
       {/* Navigation */}

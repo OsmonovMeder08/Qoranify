@@ -258,7 +258,7 @@ function App() {
         return (
           <div>
             <section className="mb-8">
-              <h2 className="text-3xl font-bold mb-2">Assalamu Alaikum</h2>
+              <h2 className="text-3xl font-bold mb-2">السلام عليكم</h2>
               <p className="text-gray-300">Listen to the beautiful recitation of the Holy Quran</p>
             </section>
 
