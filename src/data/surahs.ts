@@ -220,5 +220,115 @@ export const surahs: Surah[] = [
   audioUrl: 'https://server8.mp3quran.net/afs/020.mp3',
   reciter: 'Ahmed ibn Ali al-Ajamy',
   reciterId: 1
+},
+{
+  id: 21,
+  name: 'Al-Anbiya',
+  arabicName: 'الأنبياء',
+  number: 21,
+  verses: 112,
+  duration: '50:10',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/021.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 22,
+  name: 'Al-Hajj',
+  arabicName: 'الحج',
+  number: 22,
+  verses: 78,
+  duration: '42:35',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/022.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 23,
+  name: 'Al-Mu’minun',
+  arabicName: 'المؤمنون',
+  number: 23,
+  verses: 118,
+  duration: '48:50',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/023.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 24,
+  name: 'An-Nur',
+  arabicName: 'النور',
+  number: 24,
+  verses: 64,
+  duration: '36:20',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/024.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 25,
+  name: 'Al-Furqan',
+  arabicName: 'الفرقان',
+  number: 25,
+  verses: 77,
+  duration: '38:45',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/025.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 26,
+  name: 'Ash-Shu’ara',
+  arabicName: 'الشعراء',
+  number: 26,
+  verses: 227,
+  duration: '1:02:10',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/026.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 27,
+  name: 'An-Naml',
+  arabicName: 'النمل',
+  number: 27,
+  verses: 93,
+  duration: '44:05',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/027.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 28,
+  name: 'Al-Qasas',
+  arabicName: 'القصص',
+  number: 28,
+  verses: 88,
+  duration: '46:30',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/028.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 29,
+  name: 'Al-Ankabut',
+  arabicName: 'العنكبوت',
+  number: 29,
+  verses: 69,
+  duration: '39:55',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/029.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
+},
+{
+  id: 30,
+  name: 'Ar-Rum',
+  arabicName: 'الروم',
+  number: 30,
+  verses: 60,
+  duration: '34:40',
+  audioUrl: 'https://server8.mp3quran.net/mishaari/030.mp3',
+  reciter: 'Mishary Rashid Alafasy',
+  reciterId: 2
 }
 ];
