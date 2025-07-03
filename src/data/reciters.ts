@@ -45,5 +45,14 @@ export const reciters: Reciter[] = [
     followers: '2.5M',
     description: 'Imam of the Prophet\'s Mosque',
     country: 'Saudi Arabia'
-  }
+  },
+  {
+  id: 6,
+  name: 'Yasser Al-Dosari',
+  arabicName: 'ياسر الدوسري',
+  image: 'https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=https://media.islamicity.org/wp-content/uploads/2019/06/Dosary.jpg&w=350&h=350',
+  followers: '1.8M',
+  description: 'Renowned reciter and former Imam of Masjid al-Haram',
+  country: 'Saudi Arabia'
+},
 ];

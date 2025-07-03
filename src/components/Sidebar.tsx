@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Search, Library, BookOpen, Plus, Heart, Download, Moon } from 'lucide-react';
+import { Home, Search, Library, BookOpen, Plus, Heart, Download, Moon, Sun } from 'lucide-react';
 
 interface SidebarProps {
   activeSection: string;

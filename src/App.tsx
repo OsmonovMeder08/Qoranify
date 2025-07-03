@@ -64,7 +64,7 @@ function App() {
   );
 
   const favoriteSurahs = surahs.filter(surah => favorites.includes(surah.id));
-  const recentlyPlayed = surahs.slice(0, 4);
+  const recentlyPlayed = surahs.slice(0, 10);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -294,7 +294,7 @@ function App() {
             <section className="mb-8">
               <h3 className="text-xl font-semibold mb-4">Featured Reciters</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {reciters.slice(0, 5).map((reciter) => (
+                {reciters.slice(0, 7).map((reciter) => (
                   <ReciterCard
                     key={reciter.id}
                     reciter={reciter}
@@ -307,7 +307,7 @@ function App() {
             <section>
               <h3 className="text-xl font-semibold mb-4">Popular Surahs</h3>
               <SurahList
-                surahs={surahs.slice(0, 6)}
+                surahs={surahs.slice(0, 10)}
                 onPlaySurah={playSurah}
                 onToggleFavorite={handleToggleFavorite}
                 onAddToPlaylist={handleAddToPlaylist}
