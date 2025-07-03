@@ -36,13 +36,16 @@ const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   const renderSidebarContent = () => (
-    <div className="w-64 bg-black/80 backdrop-blur-sm p-6 flex flex-col h-full">
+    // Вместо фиксированной ширины w-64 используем w-full с ограничением max-w-xs для адаптивности
+    <div className="w-full max-w-xs bg-black/80 backdrop-blur-sm p-6 flex flex-col h-full">
       {/* Logo */}
-      <div className="flex items-center justify-between mb-8 md:justify-start md:gap-2">
+      <div className="flex items-center justify-between mb-8">
         <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center">
           <Moon className="w-5 h-5" />
         </div>
+        {/* Заголовок показываем только на десктопе */}
         <h1 className="text-xl font-bold hidden md:block">Meda-Qoranify</h1>
+        {/* Кнопка закрытия для мобильной версии */}
         <button onClick={() => setMobileOpen(false)} className="md:hidden text-gray-300">
           <X />
         </button>
@@ -141,7 +144,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Mobile Sidebar */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm md:hidden">
+        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm md:hidden flex">
           {renderSidebarContent()}
         </div>
       )}
