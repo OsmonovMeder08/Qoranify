@@ -8,7 +8,7 @@ export const surahs: Surah[] = [
     number: 1,
     verses: 7,
     duration: '0:51',
-    audioUrl: 'https://server8.mp3quran.net/afs/001.mp3',
+    audioUrl: '/audio/Al-Fatiha.mp4',
     reciter: 'Osmonov Al-Meder',
     reciterId: 1
   },
