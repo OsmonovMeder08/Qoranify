@@ -8,36 +8,62 @@ import Sidebar from './components/Sidebar';
 import AudioPlayer from './components/AudioPlayer';
 import SurahList from './components/SurahList';
 import ReciterCard from './components/ReciterCard';
+import { fetchFavorites, toggleFavorite } from './api';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [playlists, setPlaylists] = useState<string[]>(['My Favorites', 'Recently Added']);
+  const [playlists, setPlaylists] = useState<string[]>([]);
   const [surahs, setSurahs] = useState<Surah[]>(initialSurahs);
   const [selectedReciter, setSelectedReciter] = useState<Reciter | null>(null);
+  const [isShuffleOn, setIsShuffleOn] = useState(false);
+  const [isRepeatOn, setIsRepeatOn] = useState(false);
   
   const { audioState, playSurah, togglePlayPause, seekTo, setVolume } = useAudio();
 
-  // Load favorites from localStorage
+  const saveFavoritesFallback = (nextFavorites: number[]) => {
+    localStorage.setItem('favorites', JSON.stringify(nextFavorites));
+  };
+
   useEffect(() => {
-    const savedFavorites = localStorage.getItem('favorites');
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
-    }
+    let isMounted = true;
+
+    fetchFavorites()
+      .then((serverFavorites) => {
+        if (!isMounted) return;
+        setFavorites(serverFavorites);
+        saveFavoritesFallback(serverFavorites);
+      })
+      .catch(() => {
+        const savedFavorites = localStorage.getItem('favorites');
+        if (!isMounted || !savedFavorites) return;
+        setFavorites(JSON.parse(savedFavorites));
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  // Save favorites to localStorage
-  useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
   const handleToggleFavorite = (surahId: number) => {
-    setFavorites(prev => 
-      prev.includes(surahId) 
+    setFavorites(prev => {
+      const nextFavorites = prev.includes(surahId)
         ? prev.filter(id => id !== surahId)
-        : [...prev, surahId]
-    );
+        : [...prev, surahId];
+
+      saveFavoritesFallback(nextFavorites);
+      return nextFavorites;
+    });
+
+    toggleFavorite(surahId)
+      .then((serverFavorites) => {
+        setFavorites(serverFavorites);
+        saveFavoritesFallback(serverFavorites);
+      })
+      .catch(() => {
+        console.error('Could not save favorite to the backend.');
+      });
   };
 
   const handleCreatePlaylist = () => {
@@ -55,6 +81,62 @@ function App() {
   const handleSelectReciter = (reciter: Reciter) => {
     setSelectedReciter(reciter);
     setActiveSection('reciter-detail');
+  };
+
+  const getCurrentSurahIndex = () => {
+    return audioState.currentSurah
+      ? surahs.findIndex(surah => surah.id === audioState.currentSurah?.id)
+      : -1;
+  };
+
+  const playSurahAtIndex = (index: number) => {
+    if (!surahs.length) return;
+    const nextIndex = (index + surahs.length) % surahs.length;
+    playSurah(surahs[nextIndex]);
+  };
+
+  const handlePreviousSurah = () => {
+    if (!audioState.currentSurah) return;
+
+    if (audioState.currentTime > 3) {
+      seekTo(0);
+      return;
+    }
+
+    playSurahAtIndex(getCurrentSurahIndex() - 1);
+  };
+
+  const handleNextSurah = () => {
+    if (!audioState.currentSurah) return;
+
+    if (isRepeatOn) {
+      seekTo(0);
+      playSurah(audioState.currentSurah);
+      return;
+    }
+
+    if (isShuffleOn && surahs.length > 1) {
+      let nextIndex = getCurrentSurahIndex();
+      while (surahs[nextIndex]?.id === audioState.currentSurah.id) {
+        nextIndex = Math.floor(Math.random() * surahs.length);
+      }
+      playSurahAtIndex(nextIndex);
+      return;
+    }
+
+    playSurahAtIndex(getCurrentSurahIndex() + 1);
+  };
+
+  const handleSeekBackward = () => {
+    seekTo(Math.max(0, audioState.currentTime - 10));
+  };
+
+  const handleSeekForward = () => {
+    const nextTime = audioState.duration
+      ? Math.min(audioState.duration, audioState.currentTime + 10)
+      : audioState.currentTime + 10;
+
+    seekTo(nextTime);
   };
 
   const filteredSurahs = surahs.filter(surah =>
@@ -362,10 +444,18 @@ function App() {
       <AudioPlayer
         audioState={audioState}
         onTogglePlayPause={togglePlayPause}
+        onPrevious={handlePreviousSurah}
+        onNext={handleNextSurah}
+        onSeekBackward={handleSeekBackward}
+        onSeekForward={handleSeekForward}
+        onToggleShuffle={() => setIsShuffleOn(prev => !prev)}
+        onToggleRepeat={() => setIsRepeatOn(prev => !prev)}
         onSeek={seekTo}
         onVolumeChange={setVolume}
         onToggleFavorite={() => audioState.currentSurah && handleToggleFavorite(audioState.currentSurah.id)}
         isFavorite={audioState.currentSurah ? favorites.includes(audioState.currentSurah.id) : false}
+        isShuffleOn={isShuffleOn}
+        isRepeatOn={isRepeatOn}
       />
     </div>
   );

@@ -1,23 +1,39 @@
 import React from 'react';
-import { Play, Pause, SkipBack, SkipForward, Heart, Shuffle, Repeat, Volume2 } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Heart, Shuffle, Repeat, Volume2, RotateCcw, RotateCw } from 'lucide-react';
 import { AudioState, Surah } from '../types';
 
 interface AudioPlayerProps {
   audioState: AudioState;
   onTogglePlayPause: () => void;
+  onPrevious: () => void;
+  onNext: () => void;
+  onSeekBackward: () => void;
+  onSeekForward: () => void;
+  onToggleShuffle: () => void;
+  onToggleRepeat: () => void;
   onSeek: (time: number) => void;
   onVolumeChange: (volume: number) => void;
   onToggleFavorite: () => void;
   isFavorite: boolean;
+  isShuffleOn: boolean;
+  isRepeatOn: boolean;
 }
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({
   audioState,
   onTogglePlayPause,
+  onPrevious,
+  onNext,
+  onSeekBackward,
+  onSeekForward,
+  onToggleShuffle,
+  onToggleRepeat,
   onSeek,
   onVolumeChange,
   onToggleFavorite,
-  isFavorite
+  isFavorite,
+  isShuffleOn,
+  isRepeatOn
 }) => {
   const { isPlaying, currentTime, duration, volume, currentSurah } = audioState;
 
@@ -69,11 +85,17 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
         {/* Player Controls */}
         <div className="flex items-center gap-4 flex-1 justify-center">
-          <button className="text-gray-400 hover:text-white">
+          <button
+            onClick={onToggleShuffle}
+            className={`hover:text-white ${isShuffleOn ? 'text-emerald-400' : 'text-gray-400'}`}
+          >
             <Shuffle className="w-5 h-5" />
           </button>
-          <button className="text-gray-400 hover:text-white">
+          <button onClick={onPrevious} className="text-gray-400 hover:text-white">
             <SkipBack className="w-5 h-5" />
+          </button>
+          <button onClick={onSeekBackward} className="text-gray-400 hover:text-white">
+            <RotateCcw className="w-5 h-5" />
           </button>
           <button
             onClick={onTogglePlayPause}
@@ -81,10 +103,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
           >
             {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
           </button>
-          <button className="text-gray-400 hover:text-white">
+          <button onClick={onSeekForward} className="text-gray-400 hover:text-white">
+            <RotateCw className="w-5 h-5" />
+          </button>
+          <button onClick={onNext} className="text-gray-400 hover:text-white">
             <SkipForward className="w-5 h-5" />
           </button>
-          <button className="text-gray-400 hover:text-white">
+          <button
+            onClick={onToggleRepeat}
+            className={`hover:text-white ${isRepeatOn ? 'text-emerald-400' : 'text-gray-400'}`}
+          >
             <Repeat className="w-5 h-5" />
           </button>
         </div>
